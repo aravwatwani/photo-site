@@ -26,7 +26,7 @@
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
     <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CITY</a>
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CITY</a>
     <a href="portraits.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTRAIT</a>
     <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
@@ -47,31 +47,20 @@
     <!-- Photo grid -->
     <div class="w3-row w3-grayscale-min">
       <div class="w3-quarter">
-        <img src="/img/city/city1.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
-        <img src="/img/city/city2.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
-        <img src="/img/city/city3.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-        <img src="/img/city/city4.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+        <img src="/img/city/city1.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city2.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city3.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city4.jpg" style="width:100%" onclick="onClick(this)">
 
 
       </div>
 
       <div class="w3-quarter">
-        <img src="/img/city/city5.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-        <img src="/img/city/city6.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
-        <img src="/img/city/city7.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
-        <img src="/img/city/city8.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-        <img src="/img/city/city17.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-
-
-
-
-      </div>
-
-      <div class="w3-quarter">
-        <img src="/img/city/city9.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-        <img src="/img/city/city10.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-        <img src="/img/city/city11.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-        <img src="/img/city/city12.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+        <img src="/img/city/city5.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city6.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city7.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city8.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city17.jpg" style="width:100%" onclick="onClick(this)">
 
 
 
@@ -79,12 +68,21 @@
       </div>
 
       <div class="w3-quarter">
-        <img src="/img/city/city13.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-        <img src="/img/city/city14.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
-        <img src="/img/city/city15.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
-        <img src="/img/city/city16.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
+        <img src="/img/city/city9.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city10.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city11.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city12.jpg" style="width:100%" onclick="onClick(this)">
 
 
+
+
+      </div>
+
+      <div class="w3-quarter">
+        <img src="/img/city/city13.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city14.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city15.jpg" style="width:100%" onclick="onClick(this)">
+        <img src="/img/city/city16.jpg" style="width:100%" onclick="onClick(this)">
 
       </div>
 
@@ -104,38 +102,15 @@
     </div>
   </div>
 
-  <!-- Contact section -->
-  <div class="w3-container w3-dark-grey w3-padding-32 w3-padding-large" id="contact">
-    <div class="w3-content" style="max-width:600px">
-      <h4 class="w3-center"><b>Contact Me</b></h4>
-      <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-section">
-          <label>Name</label>
-          <input class="w3-input w3-border" type="text" name="Name" required>
-        </div>
-        <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input w3-border" type="text" name="Email" required>
-        </div>
-        <div class="w3-section">
-          <label>Message</label>
-          <input class="w3-input w3-border" type="text" name="Message" required>
-        </div>
-        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
-      </form>
-    </div>
-  </div>
-
   <!-- Footer -->
   <footer class="w3-container w3-padding-32 w3-grey">
     <div class="w3-row-padding">
       <div class="w3-third">
-        <h3>INFO</h3>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p>© 2019 Arav Watwani. <br>A work in progress.</p>
       </div>
 
 
+    </div>
   </footer>
 
 
