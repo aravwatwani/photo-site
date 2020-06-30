@@ -9,6 +9,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
 <link rel="manifest" href="icon/site.webmanifest">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
   body,
   h1,
@@ -18,36 +20,111 @@
   h5 {
     font-family: "Josefin Sans", sans-serif
   }
-
   html {
     background-color: white;
   }
-
   body {
     opacity: 1;
     transition: 3s opacity;
   }
-
   body.fade-out {
     opacity: 0;
     transition: none;
   }
-
   .w3-quarter img {
     cursor: pointer;
     filter: saturate(2);
     padding: 5px;
-
   }
-
   .w3-quarter img:hover {
     opacity: 0.6;
     transition: 0.3s
   }
+
+
+  .fa {
+    padding: 8px;
+    font-size: 20px;
+    width: 37px;
+    margin-top: 6px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-github {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+  }
+
+  .loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 4px solid black;
+    animation: loader 3s infinite ease;
+  }
+
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #FF6347;
+    animation: loader-inner 5s infinite ease-in;
+  }
+
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+
 </style>
 
-<body class="w3-light-grey">
-
+<body>
   <!-- fade in onload -->
   <script>
     document.body.className += 'fade-out';
@@ -58,7 +135,6 @@
       $('body').removeClass('fade-out');
     });
   </script>
-
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
     <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
@@ -67,96 +143,75 @@
     <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
     <!-- <a href="#contact" onclick="close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a> -->
   </nav>
-
   <!-- Top menu on small screens -->
   <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
     <span class="w3-left w3-padding">ARAV WATWANI</span>
     <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
   </header>
-
   <!-- Overlay effect when opening sidebar on small screens -->
   <div class="w3-overlay w3-animate-opaportrait" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
   <!-- !PAGE CONTENT! -->
-  <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
-    <hr>
-    <!-- Photo grid -->
+  <div class="w3-main w3-content" style="max-width:1600px;margin-top: 59px">
+    <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+      <hr>
+      <!-- Photo grid -->
 
-    <div class="w3-row w3-grayscale-min">
-      <div class="w3-quarter">
-        <img src="/img/portrait/portrait1.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait2.JPG" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait7.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait13.JPG" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait17.JPG" style="width:100%" onclick="onClick(this)">
+      <div class="w3-row w3-grayscale-min">
+        <div class="w3-quarter">
 
-
-
-
+          <img src="/img/portrait/portrait1.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait2.JPG" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait7.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait13.JPG" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait17.JPG" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-quarter">
+          <img src="/img/portrait/portrait3.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait4.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait12.JPG" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait14.JPG" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-quarter">
+          <img src="/img/portrait/portrait5.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait6.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait11.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait15.JPG" style="width:100%" onclick="onClick(this)">
+        </div>
+        <div class="w3-quarter">
+          <img src="/img/portrait/portrait8.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait9.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait10.jpg" style="width:100%" onclick="onClick(this)">
+          <img src="/img/portrait/portrait16.JPG" style="width:100%" onclick="onClick(this)">
+        </div>
       </div>
-
-      <div class="w3-quarter">
-        <img src="/img/portrait/portrait3.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait4.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait12.JPG" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait14.JPG" style="width:100%" onclick="onClick(this)">
-
-
-
-
-      </div>
-
-      <div class="w3-quarter">
-        <img src="/img/portrait/portrait5.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait6.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait11.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait15.JPG" style="width:100%" onclick="onClick(this)">
-
-
-      </div>
-
-      <div class="w3-quarter">
-        <img src="/img/portrait/portrait8.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait9.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait10.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/portrait/portrait16.JPG" style="width:100%" onclick="onClick(this)">
-
-
-
-
-      </div>
-
     </div>
-  </div>
-
-  <div class="w3-center w3-padding-32">
-
-  </div>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
+    <div class="w3-center w3-padding-32">
     </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey">
-    <div class="w3-row-padding">
-      <div class="w3-third">
-        <p>© 2020 Arav Watwani. <br>A work in progress.</p>
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
       </div>
-
-
     </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-grey">
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <p>© 2020 Arav Watwani. <br>A work in progress. <br>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+          </p>
+        </div>
 
-
-  <!-- End page content -->
+      </div>
+    </footer>
+    <!-- End page content -->
   </div>
-
   <script>
     // Script to open and close sidebar
     function w3_open() {
@@ -168,7 +223,6 @@
       document.getElementById("mySidebar").style.display = "none";
       document.getElementById("myOverlay").style.display = "none";
     }
-
     // Modal Image Gallery
     function onClick(element) {
       document.getElementById("img01").src = element.src;
@@ -178,6 +232,14 @@
     }
   </script>
 
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <script type="text/javascript">
+    $(window).delay(500).on("load", function() {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
 
 </body>
 
