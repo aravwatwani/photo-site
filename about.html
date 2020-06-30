@@ -42,77 +42,6 @@
     opacity: 0.6;
     transition: 0.3s
   }
-  .loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-  }
-
-  .loader {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    border: 4px solid black;
-    animation: loader 3s infinite ease;
-  }
-
-  .loader-inner {
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color: #FF6347;
-    animation: loader-inner 5s infinite ease-in;
-  }
-
-  @keyframes loader {
-    0% { transform: rotate(0deg);}
-    25% { transform: rotate(180deg);}
-    50% { transform: rotate(180deg);}
-    75% { transform: rotate(360deg);}
-    100% { transform: rotate(360deg);}
-  }
-
-  @keyframes loader-inner {
-    0% { height: 0%;}
-    25% { height: 0%;}
-    50% { height: 100%;}
-    75% { height: 100%;}
-    100% { height: 0%;}
-  }
-
-  
-
-  .fa:hover {
-    opacity: 0.7;
-  }
-
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
 </style>
 
 <body>
@@ -153,10 +82,10 @@
       <img src="/img/about.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
       <div class="w3-content w3-justify" style="max-width:600px">
         <h4>Arav Watwani</h4>
-        <p>Aside from being a full-time Computer Science student at UC Berkeley, I am a determined photographer, developer, and musician. I have been photographing for 6 years, often finding myself in precarious scenarios chasing the thrill of the
-          perfect
+        <p>Aside from being a full-time student at Westview High School, I am a determined photographer, developer, and musician. I have been photographing for 6 years, often finding myself in precarious scenarios chasing the thrill of the perfect
           shot and experiencing new places. To me, photography as an extension of the human experience; a visual language that is absorbed and read. My love for photography has served as the perfect way to elicit responses in viewers and let them
-          live through my eyes at any particular moment.
+          live
+          through my eyes at any particular moment.
         </p>
         <p>Contact me at <a href="mailto:aravwatwani@gmail.com" target="_top">aravwatwani@gmail.com</a>.</p>
         <hr class="w3-opacity">
@@ -174,10 +103,6 @@
           <p>© 2020 Arav Watwani. <br>A work in progress.</p>
         </div>
 
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-instagram"></a>
 
       </div>
     </footer>
@@ -205,15 +130,6 @@
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
   }
-</script>
-
-<div class="loader-wrapper">
-  <span class="loader"><span class="loader-inner"></span></span>
-</div>
-<script type="text/javascript">
-  $(window).delay(500).on("load", function() {
-    $(".loader-wrapper").fadeOut("slow");
-  });
 </script>
 
 </html>
