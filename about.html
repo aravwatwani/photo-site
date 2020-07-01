@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <title>Arav Watwani</title>
 <meta charset="UTF-8">
@@ -9,6 +8,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
 <link rel="manifest" href="icon/site.webmanifest">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
   body,
   h1,
@@ -25,22 +26,97 @@
     opacity: 1;
     transition: 3s opacity;
   }
-
   body.fade-out {
     opacity: 0;
     transition: none;
   }
-
   .w3-quarter img {
     cursor: pointer;
     filter: saturate(2);
     padding: 5px;
-
   }
-
   .w3-quarter img:hover {
     opacity: 0.6;
     transition: 0.3s
+  }
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+  }
+
+  .loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 4px solid black;
+    animation: loader 3s infinite ease;
+  }
+
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #FF6347;
+    animation: loader-inner 5s infinite ease-in;
+  }
+
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+
+  .fa {
+    padding: 8px;
+    font-size: 20px;
+    width: 37px;
+    margin-top: 6px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-github {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
   }
 </style>
 
@@ -55,7 +131,6 @@
       $('body').removeClass('fade-out');
     });
   </script>
-
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
     <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
@@ -64,50 +139,47 @@
     <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
     <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a> -->
   </nav>
-
   <!-- Top menu on small screens -->
   <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
     <span class="w3-left w3-padding">ARAV WATWANI</span>
     <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
   </header>
-
   <!-- Overlay effect when opening sidebar on small screens -->
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
   <!-- !PAGE CONTENT! -->
   <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
-
     <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
       <h4><b>About Me</b></h4>
       <img src="/img/about.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
       <div class="w3-content w3-justify" style="max-width:600px">
         <h4>Arav Watwani</h4>
-        <p>Aside from being a full-time student at Westview High School, I am a determined photographer, developer, and musician. I have been photographing for 6 years, often finding myself in precarious scenarios chasing the thrill of the perfect
-          shot and experiencing new places. To me, photography as an extension of the human experience; a visual language that is absorbed and read. My love for photography has served as the perfect way to elicit responses in viewers and let them
-          live
-          through my eyes at any particular moment.
-        </p>
-        <p>Contact me at <a href="mailto:aravwatwani@gmail.com" target="_top">aravwatwani@gmail.com</a>.</p>
-        <hr class="w3-opacity">
-
-
+        <p>Aside from being a full-time Computer Science student at UC Berkeley, I am a determined photographer, developer, and musician. I have been photographing for 6 years, often finding myself in precarious scenarios chasing the thrill of the
+          perfect
+          <p>Aside from being a full-time student at Westview High School, I am a determined photographer, developer, and musician. I have been photographing for 6 years, often finding myself in precarious scenarios chasing the thrill of the perfect
+            shot and experiencing new places. To me, photography as an extension of the human experience; a visual language that is absorbed and read. My love for photography has served as the perfect way to elicit responses in viewers and let them
+            live through my eyes at any particular moment.
+            live
+            through my eyes at any particular moment.
+          </p>
+          <p>Contact me at <a href="mailto:aravwatwani@gmail.com" target="_top">aravwatwani@gmail.com</a>.</p>
+          <hr class="w3-opacity">
       </div>
     </div>
-
-
-
     <!-- Footer -->
     <footer class="w3-container w3-padding-32 w3-grey">
       <div class="w3-row-padding">
         <div class="w3-third">
-          <p>© 2020 Arav Watwani. <br>A work in progress.</p>
+          <p>© 2020 Arav Watwani. <br>A work in progress. <br>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+          </p>
         </div>
 
 
       </div>
     </footer>
-
-
     <!-- End page content -->
   </div>
 </body>
@@ -122,7 +194,6 @@
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
   }
-
   // Modal Image Gallery
   function onClick(element) {
     document.getElementById("img01").src = element.src;
@@ -130,6 +201,15 @@
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
   }
+</script>
+
+<div class="loader-wrapper">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
+<script type="text/javascript">
+  $(window).delay(500).on("load", function() {
+    $(".loader-wrapper").fadeOut("slow");
+  });
 </script>
 
 </html>
