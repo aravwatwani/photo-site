@@ -1,6 +1,7 @@
 ---
+path: /blog/hello-world/
 title: Hello World
-date: "2020-03-10"
+date: 2018-11-05T16:25:21.303Z
 thumbnail: ./berkeley.jpg
 ---
 
